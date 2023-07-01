@@ -23,7 +23,7 @@ namespace Infrastructure.StateMachine.States
 
         private void EnterLoadLevel()
         {
-            _stateMachine.Enter<LoadLevelState, string>(GameMoreLess);
+            _stateMachine.Enter<LoadGameState, string>(GameMoreLess);
         }
 
         private void RegisterServices()

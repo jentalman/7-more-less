@@ -6,11 +6,15 @@ using Zenject;
 
 public class BootsTrapInstaller : MonoInstaller
 {
-    public ButtonsModel rollButton;
+    public Buttons buttons;
+    public MoreLessView view;
         
     public override void InstallBindings()
     {
-        Container.Bind<ButtonsModel>().FromInstance(rollButton);
-        Container.Bind<Test>().AsSingle().NonLazy();
+        Container.Bind<Buttons>().FromInstance(buttons);
+        
+        Container.Bind<Presenter>().AsSingle();
+        Container.Bind<Model>().AsSingle();
+        Container.Bind<IMoreLessView>().To<MoreLessView>().FromInstance(view);
     }
 }

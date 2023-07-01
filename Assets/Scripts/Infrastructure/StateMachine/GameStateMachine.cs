@@ -14,7 +14,7 @@ namespace Infrastructure.StateMachine
             _states = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader)
+                [typeof(LoadGameState)] = new LoadGameState(this, sceneLoader)
             };
         }
 

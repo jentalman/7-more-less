@@ -1,11 +1,11 @@
 ﻿namespace Infrastructure.StateMachine.States
 {
-    public class LoadLevelState : IPayloadedState<string>
+    public class LoadGameState : IPayloadedState<string>
     {
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
 
-        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader)
+        public LoadGameState(GameStateMachine gameStateMachine, SceneLoader sceneLoader)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
